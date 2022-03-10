@@ -1,0 +1,21 @@
+.MyPolls {
+    color: white;
+}
+
+.MyPollsTitleText{
+    -webkit-text-stroke: 1px black; /* width and color */
+}
+
+.PollListingContainer{
+    display: flex;
+    flex-direction: column;
+    background: #FF9C46;
+    gap: 10px;
+}
+
+.PollListing {
+    display: flex;
+    flex-direction: row;
+    background: #FF7700;
+    border-right: 25px;
+}
