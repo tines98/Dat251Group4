@@ -1,5 +1,4 @@
 /node_modules
-src/firebaseConfig.js
 build
 
 # Logs
