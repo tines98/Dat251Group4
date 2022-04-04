@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Welcome.css"
 import firebase from "firebase/compat";
+import {db} from "../firebase";
 
 const Welcome = () => {
     return (
@@ -13,12 +14,17 @@ const Welcome = () => {
     );
 }
 
-const getSkisButton = document.querySelector(".GetSkisButton");
-getSkisButton.addEventListener("click", () =>{
-    const getSkis = firebase.functions().httpsCallable("getSkis");
-    getSkis().then((result) => {
-        console.log(result.data);
-    });
-})
+window.onload = function() {
+    const getSkisButton = document.querySelector(".GetSkisButton");
+    if (getSkisButton){
+        getSkisButton.addEventListener("click", () =>{
+            const getSkis = firebase.functions().httpsCallable("getSkis");
+            console.log("clicked the button");
+            getSkis().then((result,response) => {
+                console.log(result.data);
+            });
+        });
+    }
+}
 
 export default Welcome;
