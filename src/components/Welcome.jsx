@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Welcome.css"
 import firebase from "firebase/compat";
-import {db} from "../firebase";
+//import {db} from "../firebase";
 
 const Welcome = () => {
     return (
