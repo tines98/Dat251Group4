@@ -2,7 +2,7 @@
 import { firebaseConfig } from "./firebaseConfig";
 import firebase from "firebase/compat";
 import { getAuth } from "firebase/auth";
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -22,5 +22,6 @@ export {
     auth,
     storage,
     ref,
-    uploadBytes
+    uploadBytes,
+    getDownloadURL
 };
