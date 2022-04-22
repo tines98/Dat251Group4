@@ -10,6 +10,7 @@ const TopBarContainerLeft = () =>{
     return (
         <div className="TopBarContainerLeft">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
+            <h1>Rentivity</h1>
         </div>
     );
 }

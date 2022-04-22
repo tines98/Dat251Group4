@@ -9,10 +9,13 @@ const Welcome = () => {
             <h1>Welcome!</h1>
             <h2>Search for an item</h2>
             {/*TODO make onClick that sends a Get request to REST API*/}
-            <button className={"GetSkisButton"} />
+            <button className={"GetSkisButton"}
+             >Type item: for example skis</button>
+    
         </div>
     );
 }
+
 
 window.onload = function() {
     const getSkisButton = document.querySelector(".GetSkisButton");

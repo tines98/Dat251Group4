@@ -2,7 +2,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: black;
 }
 
 .GetSkisButton {
+    display:block;
+    color: #909090;
+    float:left;
+    background-color: white;
+    cursor: pointer;
 }
+.GetSkisButton {width: 100%; height: 50px;}
