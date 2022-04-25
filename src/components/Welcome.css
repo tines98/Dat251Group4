@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     color: black;
+    font-family: titillium;
 }
 
 .GetSkisButton {

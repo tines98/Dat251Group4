@@ -23,11 +23,12 @@ const Register = () => {
         <div className="form">
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
-                    <label>Email </label>
-                    <input className="Email" type="text" name="uname" required />
+                    <label><b>Email</b> </label>
+                    <input className="Email" type="text" name="uname" required/>
+
                 </div>
                 <div className="input-container">
-                    <label>Password </label>
+                    <label><b>Password</b> </label>
                     <input className="Password" type="password" name="pass" required />
                 </div>
                     <div className="button-container">
