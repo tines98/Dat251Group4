@@ -1,9 +1,7 @@
 .Register {
-   /* display: flex;
+    display: flex;
     flex-direction:column;
-    justify-content: space-between;*/
-    position: absolute;
-    right: 100px;
+    justify-content: space-between;
 }
 
 .GetRegisterButton {

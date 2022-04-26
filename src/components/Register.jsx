@@ -13,7 +13,6 @@ const handleSubmit = (event) => {
     .then(() =>
         sendEmailVerification(auth.currentUser))
         .catch((err) => alert(err.message))
-
     // Prevent page reload
     event.preventDefault();
   };
@@ -32,7 +31,7 @@ const Register = () => {
                     <input className="Password" type="password" name="pass" required />
                 </div>
                     <div className="button-container">
-                    <input type="submit" />
+                        <input type="submit"/>
                 </div>
             </form>
         </div>

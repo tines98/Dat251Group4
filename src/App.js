@@ -13,6 +13,7 @@ import Welcome from "./components/Welcome";
 import Register from "./components/Register";
 import UploadImage from "./components/UploadImage";
 import DisplayImage from "./components/DisplayImage";
+import MyAccount from "./components/MyAccount";
 
 function App() {
     return (
@@ -32,6 +33,8 @@ function App() {
                         <Route path="/uploadImage" element={<UploadImage/>} />
 
                         <Route path="/DisplayImage" element={<DisplayImage/>} />
+
+                        <Route path="/MyAccount" element={<MyAccount/>} />
 
                     </Routes>
                 </div>
