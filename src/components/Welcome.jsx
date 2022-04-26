@@ -8,8 +8,6 @@ function getItemList(setItemsList){
     var stuff = [];
     ref.onSnapshot((snapshot) => {
         snapshot.forEach(doc => {
-            //stuff.push({...doc.data(), id: doc.id});
-            // stuff.push(JSON.stringify(doc.data()));
             stuff.push(doc.data());
         });
         setItemsList(stuff);
@@ -20,20 +18,24 @@ const ItemListing = (props) => {
     return (
         <div className='ItemListing'>
             <a>Name:</a>
-            <a>{props.item.name}</a>
+            <h3>{props.item.name}</h3>
+            <a>City:</a>
+            <h3>{props.item.city}</h3>
+            <a>Owner:</a>
+            <h3>{props.item.owner}</h3>
             <a>Price:</a>
-            <a>{props.item.price}</a>
+            <h3>{props.item.price}</h3>
         </div>
     );
 }
 
 const ListItems = (props) => {
     return (
-        <>
+        <div className='ItemList'>
           {props.items.map(item => (
             <ItemListing item={item}></ItemListing>
           ))}
-        </>
+        </div>
     );
 }
 
