@@ -4,5 +4,11 @@
     justify-content: space-between;
 }
 
+.ItemListing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .GetSkisButton {
 }
