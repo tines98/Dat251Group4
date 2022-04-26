@@ -6,22 +6,25 @@
     height: 100%;
     left: 0px;
     top: 0px;
-    background-color: #FF7700;
+    background-color: #228B22;
     box-shadow: 0px 2px 5px #222222ff;
 }
 
 .TopBarContainerLeft{
     flex-grow: 1;
     display: flex;
-    overflow: hidden;
+    color: black;
+    font-size: 14px;
+    font-family:titillium;
 }
 
 .TopBarContainerRight{
     width: 50%;
-    height: 100%;
+    height: 75;
     display: flex;
     flex-direction: row-reverse;
     gap: 10px;
+    padding-bottom: 10px;
 }
 
 .App-logo {
@@ -30,4 +33,9 @@
 .buttons{
     flex-grow: 1;
     height: 100%;
+    border-radius: 15%;
+    background-color:#d1faac;
+    font-family:titillium;
+    font-weight: bold;
+    border-style:inset;
 }

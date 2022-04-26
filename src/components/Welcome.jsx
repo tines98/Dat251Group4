@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Welcome.css"
-import firebase from "firebase/compat";
 import {db} from "../firebase";
 import { useState, useEffect } from "react";
 
@@ -42,6 +41,7 @@ const Welcome = () => {
     const [itemsList, setItemsList] = useState([]);
     return (
         <div className="Welcome">
+            <img src="https://res.cloudinary.com/simpleview/image/upload/v1504857098/clients/norway/hiking_litlefjellet_andalsnes_norway_2_1_9133c8d8-8524-4326-9c33-de8358fa370a.jpg" width="750"></img>
             <h1>Welcome!</h1>
             <h2>Search for an item</h2>
             <button onClick={() => {
@@ -55,22 +55,6 @@ const Welcome = () => {
 
         </div>
     );
-}
-
-/**
- * This is an example of what a
- */
-window.onload = function() {
-    const getSkisButton = document.querySelector(".GetSkisButton");
-    if (getSkisButton){
-        getSkisButton.addEventListener("click", () =>{
-            const getSkis = firebase.functions().httpsCallable("getSkis");
-            console.log("clicked the button");
-            getSkis().then((result) => {
-                console.log(result.data);
-            });
-        });
-    }
 }
 
 export default Welcome;

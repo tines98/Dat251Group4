@@ -1,6 +1,6 @@
 import React from 'react';
 import "./TopBar.css";
-import logo from '../logo.svg';
+//import logo from '../logo.svg';
 import Button from 'react-bootstrap/Button';
 import {
     Link
@@ -10,6 +10,8 @@ const TopBarContainerLeft = () =>{
     return (
         <div className="TopBarContainerLeft">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
+            <h1><a href="/Welcome"> Rentivity</a></h1>
+
         </div>
     );
 }
@@ -25,9 +27,9 @@ const TopBarNavButton = (props) => {
 const TopBarContainerRight = () => {
     return (
         <div className="TopBarContainerRight">
-            <TopBarNavButton linkTo="/login" buttonText="Logout"/>
-            <TopBarNavButton linkTo="/polls" buttonText="My Account"/>
-            <TopBarNavButton linkTo="/create" buttonText="Post"/>
+            <TopBarNavButton linkTo="/Register" buttonText="Log in"/>
+            <TopBarNavButton linkTo="/MyAccount" buttonText="My Account"/>
+            <TopBarNavButton linkTo="/UploadImage" buttonText="Post"/>
         </div>
     );
 }

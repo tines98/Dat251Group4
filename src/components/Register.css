@@ -1,0 +1,8 @@
+.Register {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.GetRegisterButton {
+}
