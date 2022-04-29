@@ -1,26 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Register.css"
 import {createUserWithEmailAndPassword, sendEmailVerification} from 'firebase/auth'
 import {auth} from "../firebase"
-
-
+import Welcome from "./Welcome";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    useNavigate,
+    Link
+} from "react-router-dom";
 const handleSubmit = (event) => {
     //Create new user
     const email = document.querySelector(".Email").value;
     const password = document.querySelector(".Password").value;
-
+    
     createUserWithEmailAndPassword(auth, email, password)
     .then(() =>
         sendEmailVerification(auth.currentUser))
-        .catch((err) => alert(err.message))
-    // Prevent page reload
-    event.preventDefault();
+        .catch((err) => alert(err.message));
   };
 
 const Register = () => {
+    let navigate = useNavigate();
     return (
         <div className="form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={(event)=>{
+                event.preventDefault();
+                handleSubmit();
+                window.location.href="http://localhost:3000/MyAccount"
+                //window.location.href="https://rentivity-d61fc.web.app/MyAccount"
+                }}>
                 <div className="input-container">
                     <label><b>Email</b> </label>
                     <input className="Email" type="text" name="uname" required/>
@@ -35,7 +45,7 @@ const Register = () => {
                 </div>
             </form>
         </div>
-    )
+        )
 
 }
 
