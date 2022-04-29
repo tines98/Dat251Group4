@@ -1,15 +1,19 @@
 import React from 'react';
 import "./Welcome.css"
-import {db} from "../firebase";
+import {db, query, orderBy, doc, getDoc} from "../firebase";
 import { useState, useEffect } from "react";
 
-function getItemList(setItemsList){
+async function getItemList(setItemsList){
     const ref = db.collection("items");
-    var stuff = [];
+    // const ref = query(ref2, orderBy("price"))
+    var stuff = []; //im stuff
     ref.onSnapshot((snapshot) => {
         snapshot.forEach(doc => {
             stuff.push(doc.data());
         });
+        stuff.sort(function (a, b) {
+            return a.price - b.price;
+        })
         setItemsList(stuff);
     });
 }

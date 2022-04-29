@@ -10,19 +10,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #228B22;
 }
 
 .ItemListing {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #95e095;
+    background-color: #82aa82;
     border-radius: 10pt;
     padding-left: 10pt;
     padding-right: 10pt;
-    padding-top: 0pt;
-    padding-bottom: 0pt;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    border-bottom: 1px solid #333333;
 
 }
 

@@ -2,7 +2,8 @@
 import { firebaseConfig } from "./firebaseConfig";
 import firebase from "firebase/compat";
 import { getAuth } from "firebase/auth";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { query, orderBy, doc, getDoc } from "firebase/firestore"; 
+import { getStorage, ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -21,7 +22,12 @@ export {
     db,
     auth,
     storage,
+    doc,
+    getDoc,
+    query,
+    orderBy,
     ref,
     uploadBytes,
-    getDownloadURL
+    getDownloadURL,
+    listAll
 };
