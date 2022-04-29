@@ -6,10 +6,24 @@
     font-family: titillium;
 }
 
+.ItemList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #228B22;
+}
+
 .ItemListing {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #95e095;
+    border-radius: 10pt;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+
 }
 
 .GetSkisButton {
