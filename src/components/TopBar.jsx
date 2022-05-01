@@ -1,6 +1,6 @@
 import React from 'react';
 import "./TopBar.css";
-//import logo from '../logo.svg';
+import logo from '../logo.svg';
 import Button from 'react-bootstrap/Button';
 import {
     Link
@@ -9,8 +9,8 @@ import {
 const TopBarContainerLeft = () =>{
     return (
         <div className="TopBarContainerLeft">
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            <h1><Link to="/Welcome"> Rentivity</Link></h1>
+            <img src={logo} className="App-logo" alt="logo" />
+            {/* <h1><Link to="/Welcome"> Rentivity</Link></h1> */}
 
         </div>
     );
