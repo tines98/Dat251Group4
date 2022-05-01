@@ -6,6 +6,7 @@ function showImage(setImage) {
     const pathReference = ref(storage, `images/${imageName}`);
 
     getDownloadURL(pathReference).then((value) => {
+        console.log(value);
         setImage(value);
     }).catch((error) => {
         console.error("Something went wrong on getDownloadURL");
@@ -34,3 +35,6 @@ const DisplayImage = () => {
 }
 
 export default DisplayImage;
+export {
+    showImage
+}
