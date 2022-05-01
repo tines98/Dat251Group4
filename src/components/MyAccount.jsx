@@ -1,6 +1,6 @@
 import React from 'react';
 import "./MyAccount.css";
-import firebase from 'firebase/compat';
+// import firebase from 'firebase/compat';
 import {getAuth} from "firebase/auth";
 
 
