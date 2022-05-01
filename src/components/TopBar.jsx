@@ -9,9 +9,9 @@ import {
 const TopBarContainerLeft = () =>{
     return (
         <div className="TopBarContainerLeft">
-            <img src={logo} className="App-logo" alt="logo" />
-            {/* <h1><Link to="/Welcome"> Rentivity</Link></h1> */}
-
+            <Link to="/">
+                <img src={logo} className="App-logo" alt="logo"/>
+            </Link>
         </div>
     );
 }
