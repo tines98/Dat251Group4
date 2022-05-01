@@ -7,6 +7,7 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
+    Navigate,
     useNavigate,
     Link
 } from "react-router-dom";
@@ -19,7 +20,7 @@ const handleSubmit = (event) => {
     .then(() =>
         sendEmailVerification(auth.currentUser))
         .catch((err) => alert(err.message));
-  };
+};
 
 const Register = () => {
     let navigate = useNavigate();
@@ -28,9 +29,9 @@ const Register = () => {
             <form onSubmit={(event)=>{
                 event.preventDefault();
                 handleSubmit();
-                window.location.href="http://localhost:3000/MyAccount"
-                //window.location.href="https://rentivity-d61fc.web.app/MyAccount"
+                navigate("/MyAccount");
                 }}>
+                
                 <div className="input-container">
                     <label><b>Email</b> </label>
                     <input className="Email" type="text" name="uname" required/>
